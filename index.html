@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Slot Booking</title>
+    <link
+      rel="icon"
+      href="http://203.193.173.125/buildriseshine/favicon.png"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- Material Design Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Moment.js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- jQuery UI CSS -->
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- jQuery UI JS -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!-- Calendly Widget CSS -->
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+    <!-- Calendly Widget JS -->
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
+  </head>
+  <body>
+    <header>
+      <h1>Slot Booking</h1>
+    </header>
+
+    <main role="main" class="container pt-5">
+      <div class="row justify-content-md-center">
+        <div class="col col-3">
+          <div id="date" class="d-none">
+            <!-- Date input can be placed here if needed -->
+          </div>
+        </div>
+        <div class="col col-5" id="cal">
+          <div class="row justify-content-md-center">
+            <div id="selected_date" class="col col-6"></div>
+          </div>
+          <div>
+            <div id="slot_data" class="d-none"></div>
+          </div>
+        </div>
+        <div class="col col-8">
+          <div
+            class="d-flex align-items-center justify-content-center mt-5"
+            id="load"
+          >
+            <div class="spinner-border text-success" role="status"></div>
+          </div>
+
+          <a
+            data-uri=""
+            class="event text-decoration-none d-none cursor-pointer pb-4 pt-3 px-3 w-100"
+          >
+            <div id="first">
+              <h4>
+                <span id="event-marker" data-bg=""></span>
+                <span id="event-title"></span>
+                <span id="event-arrow" class="float-end mt-2"></span>
+              </h4>
+              <span id="event-desc"></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
