@@ -1,0 +1,172 @@
+/* Define CSS variables */
+:root {
+    --primary-color: #007bff; /* Bootstrap's primary color */
+    --calendar-border-color: #007bff; /* Border color for the calendar */
+    --date-border-color: #ced4da; /* Border color for individual dates */
+    --hover-bg-color: #0056b3; /* New hover background color */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: var(--primary-color);
+}
+
+h1 {
+    color: #fff;
+}
+
+#date {
+    margin: 0 auto;
+}
+
+#slot_data {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.time-slot {
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: #dbdfe2;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 120px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border: 2px solid var(--primary-color);
+}
+
+.time-slot:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Calendar container and styling */
+#cal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    
+}
+
+/* Active class for calendar border */
+#cal.active {
+    border: 2px solid var(--calendar-border-color); /* Border when active */
+}
+
+/* Increase the calendar size */
+.ui-datepicker {
+    font-size: 1.2em; /* Adjusted font size for balance */
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0;
+    border: none;
+    width: 100%; /* Full width for proper alignment */
+    background-color: #ffffff;
+}
+
+.ui-datepicker td {
+    border: 1px solid var(--date-border-color); /* Border for individual dates */
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Calendar header for proper alignment */
+.ui-datepicker-header {
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Space between arrows */
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid var(--calendar-border-color);
+}
+
+/* Previous and Next buttons styling */
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+    background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/arrow-left.svg');
+}
+
+.ui-datepicker .ui-datepicker-next {
+    background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/arrow-right.svg');
+}
+
+/* Hide default text inside buttons */
+.ui-datepicker .ui-icon {
+    display: none;
+}
+
+/* State default and hover */
+.ui-datepicker .ui-state-default {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none; /* Remove border when not selected */
+}
+
+.ui-datepicker .ui-state-hover {
+    background-color: var(--hover-bg-color);
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Remove border when no date is selected */
+.ui-datepicker .ui-datepicker-current-day {
+    color: white;
+    background-color: var(--primary-color); /* Highlight for selected date */
+    border-radius: 5px;
+    border: none; /* No border when initially selected */
+}
+
+.ui-datepicker .ui-state-active {
+    border: 2px solid var(--primary-color); /* Add a border when the date is selected */
+}
+
+/* Styling for selected date display */
+#selected_date {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #343a40;
+    margin-top: 10px;
+}
+
+#first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    border: solid var(--primary-color);
+    cursor: pointer;
+}
